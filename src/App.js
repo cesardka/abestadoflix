@@ -4,7 +4,8 @@ import BannerMain from './components/BannerMain';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
 
-import dadosIniciais from './data/dados_iniciais.json';
+import dadosIniciais from './data/dados_abestados.json';
+
 import './App.css';
 
 function App() {
