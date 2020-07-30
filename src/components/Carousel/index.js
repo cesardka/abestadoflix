@@ -1,8 +1,9 @@
 import React from 'react';
-import { VideoCardGroupContainer, VideoCardList, Title, ExtraLink } from './styles';
+import { VideoCardGroupContainer, Title, ExtraLink } from './styles';
 import VideoCard from './components/VideoCard';
+import Slider from './components/Slider';
 
-function VideoCardGroup({
+function Carousel({
   ignoreFirstVideo,
   category,
 }) {
@@ -17,14 +18,14 @@ function VideoCardGroup({
           <Title style={{ backgroundColor: categoryColor || 'red' }}>
             {categoryTitle}
           </Title>
-          {categoryExtraLink && 
+          {categoryExtraLink &&
             <ExtraLink href={categoryExtraLink.url} target="_blank">
-              {categoryExtraLink.text}  
+              {categoryExtraLink.text}
             </ExtraLink>
           }
         </>
       )}
-      <VideoCardList>
+      <Slider>
         {videos.map((video, index) => {
           if (ignoreFirstVideo && index === 0) {
             return null;
@@ -40,9 +41,9 @@ function VideoCardGroup({
             </li>
           );
         })}
-      </VideoCardList>
+      </Slider>
     </VideoCardGroupContainer>
   );
 }
 
-export default VideoCardGroup;
+export default Carousel;

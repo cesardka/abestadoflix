@@ -13,6 +13,8 @@
   --white: #FFFFFF;
   --frontEnd: #6BD1FF;
   --backEnd: #00C86F;
+  --debugBg: #FFEEAA;
+  --bodyPaddingTop: 94px;
 }
 
 html,
@@ -24,4 +26,10 @@ body {
 
 a {
   color: inherit;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--bodyPaddingTop));
 }
