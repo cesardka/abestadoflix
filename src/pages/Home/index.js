@@ -1,14 +1,12 @@
-import React from 'react';
-import Menu from './components/Menu';
-import BannerMain from './components/BannerMain';
-import Carousel from './components/Carousel';
-import Footer from './components/Footer';
+import React      from 'react';
+import Menu       from '../../components/Menu';
+import BannerMain from '../../components/BannerMain';
+import Carousel   from '../../components/Carousel';
+import Footer     from '../../components/Footer';
 
-import dadosIniciais from './data/dados_abestados.json';
+import dadosIniciais from '../../data/dados_abestados.json';
 
-import './App.css';
-
-function App() {
+function Home() {
   const { categorias } = dadosIniciais;
 
   const carousels = categorias.map((categoria, i) => {
@@ -48,4 +46,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
