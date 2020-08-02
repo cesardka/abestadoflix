@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled   from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Button = styled(Link)`
@@ -14,14 +14,17 @@ const Button = styled(Link)`
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
-    transition: all .3s;
+    transition: all .2s ease;
     transform-origin: center center;
 
     &:hover,
     &:focus {
       opacity: .5;
-      font-size: 20px;
     }
 `;
+
+Button.defaultProps = {
+  to: "",
+};
 
 export default Button;
