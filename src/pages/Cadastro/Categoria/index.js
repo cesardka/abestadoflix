@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { Link }    from 'react-router-dom';
 import Button      from '../../../components/Button';
 import PageDefault from '../../../components/PageDefault';
@@ -14,7 +15,7 @@ function CadastroCategoria() {
     const [values, setValues] = useState(valoresIniciais);
 
     function setValue(chave, valor) {
-        // chave: nome, descricao, bla, bli
+        // chave: nome, descricao, cor...
         setValues({
             ...values,
             [chave]: valor, // nome: 'valor'
@@ -27,6 +28,19 @@ function CadastroCategoria() {
             infosDoEvento.target.value
         );
     }
+
+    useEffect(() => {
+        const URL_API = window.location.origin.includes('localhost')
+            ? 'http://localhost:1212/categorias'
+            : 'https://api-abestada.herokuapp.com/categorias';
+
+        fetch(URL_API).then(async (res) => {
+            const jsonRes = await res.json();
+            setCategorias([
+                ...jsonRes,
+            ]);
+        });
+    }, []);
 
     return (
         <PageDefault>
@@ -51,8 +65,8 @@ function CadastroCategoria() {
                 />
 
                 <FormField
-                label="Descrição:"
-                type="????"
+                label="Descrição"
+                type="textarea"
                 name="descricao"
                 value={values.descricao}
                 onChange={handleChange}
@@ -75,7 +89,7 @@ function CadastroCategoria() {
                 {categorias.map((categoria, indice) => {
                 return (
                     <li key={`${categoria}${indice}`}>
-                    {categoria.nome}
+                    {categoria.titulo}
                     </li>
                 )
                 })}
