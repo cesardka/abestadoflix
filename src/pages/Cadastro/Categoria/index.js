@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Link }            from 'react-router-dom';
-import PageDefault         from '../../../components/PageDefault';
-import FormField           from '../../../components/FormField';
+import { Link }    from 'react-router-dom';
+import Button      from '../../../components/Button';
+import PageDefault from '../../../components/PageDefault';
+import FormField   from '../../../components/FormField';
 
 function CadastroCategoria() {
     const valoresIniciais = {
@@ -66,9 +66,9 @@ function CadastroCategoria() {
                     onChange={handleChange}
                 />
 
-                <button>
-                Cadastrar
-                </button>
+                <Button>
+                    Cadastrar
+                </Button>
             </form>
 
             <ul>

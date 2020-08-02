@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link }            from 'react-router-dom';
 import PageDefault         from '../../../components/PageDefault';
 import FormField           from '../../../components/FormField';
+import Button              from '../../../components/Button';
 
 function CadastroVideo() {
     // Valores iniciais de FormField
@@ -74,9 +75,9 @@ function CadastroVideo() {
                     onChange={handleChange}
                 />
 
-                <button>
+                <Button>
                     Cadastrar
-                </button>
+                </Button>
             </form>
 
             <Link to="/categoria/novo">
