@@ -1,191 +1,221 @@
 {
     "categorias": [
         {
+            "id": 1,
             "titulo": "Anos 90",
             "link": "",
             "cor": "#DD1220",
             "link_extra": {
                 "text": "A Ascenção de Florentina",
                 "url": "https://www.alura.com.br/cursos-online-front-end"
-            },
-            "videos": [
-                {
-                    "titulo": "Qual É, Qual Foi",
-                    "url": "https://www.youtube.com/watch?v=6Xp04Ly5Eeg&t=317s"
-                },
-                {
-                    "titulo": "Florentina de Jesus",
-                    "url": "https://www.youtube.com/watch?v=3POKLGqfU_0"
-                },
-                {
-                    "titulo": "Jô Soares Onze e Meia",
-                    "url": "https://www.youtube.com/watch?v=tXSy2Sn0TGQ"
-                },
-                {
-                    "titulo": "Domingo Legal: Prova da Banheira",
-                    "url": "https://www.youtube.com/watch?v=DserHjd-peE"
-                },
-                {
-                    "titulo": "Vila do Tiririca - Vinheta de estreia",
-                    "url": "https://www.youtube.com/watch?v=TxnozzBXr2s"
-                },
-                {
-                    "titulo": "Domingo Legal: Aula de Paquera com Kelly Key",
-                    "url": "https://www.youtube.com/watch?v=Q1fTYhbfMKc"
-                },
-                {
-                    "titulo": "Tiririca e Coroné Marcolino",
-                    "url": "https://www.youtube.com/watch?v=HtoT7kYyUDA"
-                }
-            ]
+            }
         },
         {
+            "id": 2,
             "titulo": "A Praça é Nossa",
             "link": "",
             "cor": "#5900B2",
             "link_extra": {
                 "text": "Carlos Alberto e seu Bom Companheiro",
                 "url": "https://www.alura.com.br/cursos-online-front-end"
-            },
-            "videos": [
-                {
-                    "titulo": "Carlos Alberto e a fazenda",
-                    "url": "https://www.youtube.com/watch?v=W333tS4kDA8&t=27s"
-                },
-                {
-                    "titulo": "",
-                    "url": "https://www.youtube.com/watch?v=j-lDxhFSpVs"
-                },
-                {
-                    "titulo": "Tiririca e o Lobo Mau",
-                    "url": "https://www.youtube.com/watch?v=8FU_VGxpARE"
-                },
-                {
-                    "titulo": "O Mistério da Folhinha Verde",
-                    "url": "https://www.youtube.com/watch?v=V6xRje3etrA"
-                },
-                {
-                    "titulo": "Memórias de Uns Trocados",
-                    "url": "https://www.youtube.com/watch?v=zKkI4rLnNf0"
-                },
-                {
-                    "titulo": "Tiririca e o Leão",
-                    "url": "https://www.youtube.com/watch?v=CKrnIQE1hXE"
-                },
-                {
-                    "titulo": "O Sapato Italiano",
-                    "url": "https://www.youtube.com/watch?v=djbxO20IIyg"
-                },
-                {
-                    "titulo": "Homenagem à Tiririca",
-                    "url": "https://www.youtube.com/watch?v=dKaxIU5wk-I"
-                },
-                {
-                    "titulo": "A Queda de Carlos Alberto",
-                    "url": "https://www.youtube.com/watch?v=FfSoBgAmGmI"
-                }
-            ]
+            }
         },
         {
+            "id": 3,
             "titulo": "SBT anos 2000",
             "link": "",
             "cor": "#0078D7",
             "link_extra": {
                 "text": "Novo Milênio no Reino dos Santos",
                 "url": "https://www.alura.com.br/cursos-online-front-end"
-            },
-            "videos": [
-                {
-                    "titulo": "Especial Hebe - Romeu e Julieta",
-                    "url": "https://www.youtube.com/watch?v=Z7vGJz19T6E"
-                },
-                {
-                    "titulo": "A Mulher que Não Para de Rir",
-                    "url": "https://www.youtube.com/watch?v=uEkCVnOEE3I"
-                },
-                {
-                    "titulo": "Escolinha do Barulho",
-                    "url": "https://www.youtube.com/watch?v=h-kLlWfULL0"
-                },
-                {
-                    "titulo": "Tiririca e Tirulipa na Escolinha do Barulho",
-                    "url": "https://www.youtube.com/watch?v=K200aUDbz5g"
-                },
-                {
-                    "titulo": "Hebe Musical",
-                    "url": "https://www.youtube.com/watch?v=0Fv8hZXoI34"
-                }
-            ]
+            }
         },
         {
+            "id": 4,
             "titulo": "Show do Tom",
             "link": "",
             "cor": "#FF9191",
             "link_extra": {
                 "text": "O Alçar de Novos Vôos",
                 "url": "https://www.alura.com.br/cursos-online-front-end"
-            },
-            "videos": [
-                {
-                    "titulo": "Bruna Surfistinha e o Lobo Mau",
-                    "url": "https://www.youtube.com/watch?v=nXoBAOTRmLg"
-                },
-                {
-                    "titulo": "O julgamento de Tiririca Trump",
-                    "url": "https://www.youtube.com/watch?v=_pk_GUgpsJc"
-                },
-                {
-                    "titulo": "Bofe de Elite",
-                    "url": "https://www.youtube.com/watch?v=_obanhWM7I4"
-                },
-                {
-                    "titulo": "O casamento de Tiririca",
-                    "url": "https://www.youtube.com/watch?v=-aMxpmq2Sx0"
-                },
-                {
-                    "titulo": "Tiririca Trump e O Sequestro",
-                    "url": "https://www.youtube.com/watch?v=7ThVBOp52GA"
-                },
-                {
-                    "titulo": "Comandante Tiririca",
-                    "url": "https://www.youtube.com/watch?v=XSUfK1dEE_c"
-                },
-                {
-                    "titulo": "Escolinha da Ivete e a bengala",
-                    "url": "https://www.youtube.com/watch?v=MWV82rWF1v4"
-                },
-                {
-                    "titulo": "Cumpadi Washtirica - O Curral",
-                    "url": "https://www.youtube.com/watch?v=u0FJhy2ODyA"
-                }
-            ]
+            }
         },
         {
+            "id": 5,
             "titulo": "Pânico na TV",
             "link": "",
             "cor": "#20B12E",
             "link_extra": {
                 "text": "Pior Que Tá Não Fica",
                 "url": "https://www.alura.com.br/cursos-online-front-end"
-            },
-            "videos": [
-                {
-                    "titulo": "Pior Não Fica - Estreia",
-                    "url": "https://www.youtube.com/watch?v=H7GtWwIa3x4&t=42s"
-                },
-                {
-                    "titulo": "Master Jegue - Sopa de Legumes com Surpresa",
-                    "url": "https://www.youtube.com/watch?v=s38e9iA5diQ"
-                },
-                {
-                    "titulo": "Pior Não Fica EP11",
-                    "url": "https://www.youtube.com/watch?v=8ND05MlrPi0"
-                },
-                {
-                    "titulo": "Tiririca Idol",
-                    "url": "https://www.youtube.com/watch?v=Tm1Fjk8HzhU"
-                }
-            ]
+            }
+        }
+    ],
+    "videos": [
+        {
+            "titulo": "Qual É, Qual Foi",
+            "url": "https://www.youtube.com/watch?v=6Xp04Ly5Eeg&t=317s",
+            "categoriaId": 1
+        },
+        {
+            "titulo": "Florentina de Jesus",
+            "url": "https://www.youtube.com/watch?v=3POKLGqfU_0",
+            "categoriaId": 1
+        },
+        {
+            "titulo": "Jô Soares Onze e Meia",
+            "url": "https://www.youtube.com/watch?v=tXSy2Sn0TGQ",
+            "categoriaId": 1
+        },
+        {
+            "titulo": "Domingo Legal: Prova da Banheira",
+            "url": "https://www.youtube.com/watch?v=DserHjd-peE",
+            "categoriaId": 1
+        },
+        {
+            "titulo": "Vila do Tiririca - Vinheta de estreia",
+            "url": "https://www.youtube.com/watch?v=TxnozzBXr2s",
+            "categoriaId": 1
+        },
+        {
+            "titulo": "Domingo Legal: Aula de Paquera com Kelly Key",
+            "url": "https://www.youtube.com/watch?v=Q1fTYhbfMKc",
+            "categoriaId": 1
+        },
+        {
+            "titulo": "Tiririca e Coroné Marcolino",
+            "url": "https://www.youtube.com/watch?v=HtoT7kYyUDA",
+            "categoriaId": 1
+        },
+        {
+            "titulo": "Carlos Alberto e a fazenda",
+            "url": "https://www.youtube.com/watch?v=W333tS4kDA8&t=27s",
+            "categoriaId": 2
+        },
+        {
+            "titulo": "",
+            "url": "https://www.youtube.com/watch?v=j-lDxhFSpVs",
+            "categoriaId": 2
+        },
+        {
+            "titulo": "Tiririca e o Lobo Mau",
+            "url": "https://www.youtube.com/watch?v=8FU_VGxpARE",
+            "categoriaId": 2
+        },
+        {
+            "titulo": "O Mistério da Folhinha Verde",
+            "url": "https://www.youtube.com/watch?v=V6xRje3etrA",
+            "categoriaId": 2
+        },
+        {
+            "titulo": "Memórias de Uns Trocados",
+            "url": "https://www.youtube.com/watch?v=zKkI4rLnNf0",
+            "categoriaId": 2
+        },
+        {
+            "titulo": "Tiririca e o Leão",
+            "url": "https://www.youtube.com/watch?v=CKrnIQE1hXE",
+            "categoriaId": 2
+        },
+        {
+            "titulo": "O Sapato Italiano",
+            "url": "https://www.youtube.com/watch?v=djbxO20IIyg",
+            "categoriaId": 2
+        },
+        {
+            "titulo": "Homenagem à Tiririca",
+            "url": "https://www.youtube.com/watch?v=dKaxIU5wk-I",
+            "categoriaId": 2
+        },
+        {
+            "titulo": "A Queda de Carlos Alberto",
+            "url": "https://www.youtube.com/watch?v=FfSoBgAmGmI",
+            "categoriaId": 2
+        },
+        {
+            "titulo": "Especial Hebe - Romeu e Julieta",
+            "url": "https://www.youtube.com/watch?v=Z7vGJz19T6E",
+            "categoriaId": 3
+        },
+        {
+            "titulo": "A Mulher que Não Para de Rir",
+            "url": "https://www.youtube.com/watch?v=uEkCVnOEE3I",
+            "categoriaId": 3
+        },
+        {
+            "titulo": "Escolinha do Barulho",
+            "url": "https://www.youtube.com/watch?v=h-kLlWfULL0",
+            "categoriaId": 3
+        },
+        {
+            "titulo": "Tiririca e Tirulipa na Escolinha do Barulho",
+            "url": "https://www.youtube.com/watch?v=K200aUDbz5g",
+            "categoriaId": 3
+        },
+        {
+            "titulo": "Hebe Musical",
+            "url": "https://www.youtube.com/watch?v=0Fv8hZXoI34",
+            "categoriaId": 3
+        },
+        {
+            "titulo": "Bruna Surfistinha e o Lobo Mau",
+            "url": "https://www.youtube.com/watch?v=nXoBAOTRmLg",
+            "categoriaId": 4
+        },
+        {
+            "titulo": "O julgamento de Tiririca Trump",
+            "url": "https://www.youtube.com/watch?v=_pk_GUgpsJc",
+            "categoriaId": 4
+        },
+        {
+            "titulo": "Bofe de Elite",
+            "url": "https://www.youtube.com/watch?v=_obanhWM7I4",
+            "categoriaId": 4
+        },
+        {
+            "titulo": "O casamento de Tiririca",
+            "url": "https://www.youtube.com/watch?v=-aMxpmq2Sx0",
+            "categoriaId": 4
+        },
+        {
+            "titulo": "Tiririca Trump e O Sequestro",
+            "url": "https://www.youtube.com/watch?v=7ThVBOp52GA",
+            "categoriaId": 4
+        },
+        {
+            "titulo": "Comandante Tiririca",
+            "url": "https://www.youtube.com/watch?v=XSUfK1dEE_c",
+            "categoriaId": 4
+        },
+        {
+            "titulo": "Escolinha da Ivete e a bengala",
+            "url": "https://www.youtube.com/watch?v=MWV82rWF1v4",
+            "categoriaId": 4
+        },
+        {
+            "titulo": "Cumpadi Washtirica - O Curral",
+            "url": "https://www.youtube.com/watch?v=u0FJhy2ODyA",
+            "categoriaId": 4
+        },
+        {
+            "titulo": "Pior Não Fica - Estreia",
+            "url": "https://www.youtube.com/watch?v=H7GtWwIa3x4&t=42s",
+            "categoriaId": 5
+        },
+        {
+            "titulo": "Master Jegue - Sopa de Legumes com Surpresa",
+            "url": "https://www.youtube.com/watch?v=s38e9iA5diQ",
+            "categoriaId": 5
+        },
+        {
+            "titulo": "Pior Não Fica EP11",
+            "url": "https://www.youtube.com/watch?v=8ND05MlrPi0",
+            "categoriaId": 5
+        },
+        {
+            "titulo": "Tiririca Idol",
+            "url": "https://www.youtube.com/watch?v=Tm1Fjk8HzhU",
+            "categoriaId": 5
         }
     ]
 }
