@@ -1,72 +1,89 @@
-import React, { useState } from 'react';
-import { Link }            from 'react-router-dom';
-import PageDefault         from '../../../components/PageDefault';
-import FormField           from '../../../components/FormField';
-import Button              from '../../../components/Button';
+import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import styled from 'styled-components';
+
+import PageDefault    from '../../../components/PageDefault';
+import FormField      from '../../../components/FormField';
+import Button         from '../../../components/Button';
+import useForm        from '../../../hooks/useForm';
+import repoCategorias from '../../../repo/categorias';
+import repoVideos     from '../../../repo/videos';
 
 function CadastroVideo() {
-    // Valores iniciais de FormField
-    const valoresIniciais = {
-        nome: '',
-        link: '',
+    let history = useHistory();
+    const [ categorias, setCategorias ] = useState([]);
+    const categoriasTitulos = categorias.map(({ titulo }) => titulo);
+
+    // Valores iniciais de cada FormField
+    const { handleChange, values } = useForm({
+        titulo: '',
+        url: '',
         descricao: '',
-    }
+        categoria: '',
+    });
 
-    // Estados
-    const [videos, setVideos] = useState([]);
-    const [values, setValues] = useState(valoresIniciais);
+    // Controle de submit
+    const handleSubmit = (event) => {
+        event.preventDefault();
 
-    // Função que altera valor de um atributo
-    function setValue(chave, valor) {
-        setValues({
-            ...values,
-            [chave]: valor, // posição [chave] dentro de values recebe valor
+        const categoriaEscolhida = categorias.find((categoria) => {
+            return categoria.titulo === values.categoria;
+        });
+
+        if (categoriaEscolhida === undefined) {
+            return false;
+        }
+
+        repoVideos.create({
+            titulo: values.titulo,
+            url: values.url,
+            descricao: values.descricao,
+            categoria: categoriaEscolhida.id,
+        }).then(() => {
+            history.push('/');
         });
     }
 
-    // Handler de submit do formulário
-    function handleSubmit(infoEvento) {
-        infoEvento.preventDefault();
-        setVideos([
-            ...videos,
-            values
-        ]);
+    // Wrapper dos botões
+    const ButtonWrapper = styled.div`
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    `;
 
-        setValues(valoresIniciais); // Reseta os valores dos inputs todos
-    }
+    useEffect(() => {
+        repoCategorias
+            .getAll()
+            .then((categorias) => {
+                setCategorias(categorias);
+            })
+    }, []);
 
-    // Handler de alteração de input
-    function handleChange(infoEvento) {
-        setValue(
-            infoEvento.target.getAttribute('name'),
-            infoEvento.target.value
-        );
-    }
 
     return (
         <PageDefault>
-            <h1>Nova Vídeo: {values.nome}</h1>
+            <h1>Novo Vídeo: {values.nome}</h1>
 
             <form onSubmit={handleSubmit}>
-                {/* Nome do vídeo      TEXT     */}
+                {/* Título do vídeo */}
                 <FormField
-                    label="Nome"
-                    name="nome"
+                    label="Título do vídeo"
+                    name="titulo"
                     type="text"
-                    value={values.nome}
+                    value={values.titulo}
                     onChange={handleChange}
                 />
 
-                {/* Link do vídeo      TEXT     */}
+                {/* Link do vídeo */}
                 <FormField
                     label="Link Youtube"
                     name="link"
                     type="text"
-                    value={values.link}
+                    value={values.url}
                     onChange={handleChange}
                 />
 
-                {/* Descrição do vídeo TEXTAREA */}
+                {/* Descrição do vídeo */}
                 <FormField
                     label="Descrição"
                     name="descricao"
@@ -75,14 +92,26 @@ function CadastroVideo() {
                     onChange={handleChange}
                 />
 
-                <Button>
-                    Cadastrar
-                </Button>
-            </form>
+                {/* Categoria */}
+                <FormField
+                    label="Categoria"
+                    name="categoria"
+                    type="datalist"
+                    value={values.categoria}
+                    onChange={handleChange}
+                    suggestions={categoriasTitulos}
+                />
 
-            <Link to="/categoria/novo">
-                Cadastrar Categoria
-            </Link>
+                <ButtonWrapper>
+                    <Button type="submit">
+                        Cadastrar
+                    </Button>
+
+                    <Button to="/categoria/novo">
+                        Cadastrar Categoria
+                    </Button>
+                </ButtonWrapper>
+            </form>
         </PageDefault>
     );
 }

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link }    from 'react-router-dom';
-import Button      from '../../../components/Button';
-import PageDefault from '../../../components/PageDefault';
-import FormField   from '../../../components/FormField';
+import { Link }       from 'react-router-dom';
+import Button         from '../../../components/Button';
+import PageDefault    from '../../../components/PageDefault';
+import FormField      from '../../../components/FormField';
+import useForm        from '../../../hooks/useForm';
+import repoCategorias from '../../../repo/categorias';
 
 function CadastroCategoria() {
     const valoresIniciais = {
@@ -11,34 +13,18 @@ function CadastroCategoria() {
         cor: '',
     }
 
+    const { values, handleChange, clearForm } = useForm(valoresIniciais);
     const [categorias, setCategorias] = useState([]);
-    const [values, setValues] = useState(valoresIniciais);
-
-    function setValue(chave, valor) {
-        // chave: nome, descricao, cor...
-        setValues({
-            ...values,
-            [chave]: valor, // nome: 'valor'
-        })
-    }
-
-    function handleChange(infosDoEvento) {
-        setValue(
-            infosDoEvento.target.getAttribute('name'),
-            infosDoEvento.target.value
-        );
-    }
 
     useEffect(() => {
-        const URL_API = window.location.origin.includes('localhost')
-            ? 'http://localhost:1212/categorias'
-            : 'https://api-abestada.herokuapp.com/categorias';
-
-        fetch(URL_API).then(async (res) => {
-            const jsonRes = await res.json();
-            setCategorias([
-                ...jsonRes,
-            ]);
+        repoCategorias.getAll()
+        .then((respostaCategorias) => {
+            setCategorias(
+                respostaCategorias,
+            );
+        })
+        .catch((err) => {
+            console.error(err.message);
         });
     }, []);
 
@@ -53,7 +39,7 @@ function CadastroCategoria() {
                     values
                 ]);
 
-                setValues(valoresIniciais)
+                clearForm();
             }}>
 
                 <FormField
