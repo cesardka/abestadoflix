@@ -1,49 +1,52 @@
-import React      from 'react';
-import Menu       from '../../components/Menu';
-import BannerMain from '../../components/BannerMain';
-import Carousel   from '../../components/Carousel';
-import Footer     from '../../components/Footer';
-
-import dadosIniciais from '../../data/dados_abestados.json';
+import React, { useState, useEffect } from 'react';
+import BannerMain     from '../../components/BannerMain';
+import Carousel       from '../../components/Carousel';
+import Loading        from '../../components/Loading';
+import PageDefault    from '../../components/PageDefault';
+import repoCategorias from '../../repo/categorias';
 
 function Home() {
-  const { categorias } = dadosIniciais;
+    const [ dadosIniciais, setDadosIniciais ] = useState([]);
 
-  const carousels = categorias.map((categoria, i) => {
+    useEffect(() => {
+        repoCategorias.getAllWithVideos()
+            .then((respostaCategorias) => {
+                setDadosIniciais(respostaCategorias);
+            })
+            .catch((err) => {
+                console.error(err.message);
+            });
+    }, []);
+
     return (
-      <div key={i}>
-      { i === 0
-        ? <Carousel
-            ignoreFirstVideo
-            category={categoria}
-          />
-        : <Carousel
-            category={categoria}
-          />
-      }
-      </div>
+        <PageDefault paddingAll="0">
+            { dadosIniciais.length === 0 && (<Loading />) }
+            { dadosIniciais.map((categoria, pos) => {
+                if (pos === 0) {
+                    return (
+                        <div key={pos}>
+                            <BannerMain
+                                videoTitle={dadosIniciais[0].videos[0].titulo}
+                                url={dadosIniciais[0].videos[0].url}
+                                videoDescription={""}
+                            />
+                            <Carousel
+                                ignoreFirstVideo
+                                category={categoria}
+                            />
+                        </div>
+                    )
+                }
+
+                return (
+                    <Carousel
+                        key={pos}
+                        category={categoria}
+                    />
+                );
+            })}
+        </PageDefault>
     );
-  });
-
-  return (
-    <div className="App">
-      <Menu />
-
-      <BannerMain
-        videoTitle={categorias[0].videos[0].titulo}
-        url={categorias[0].videos[0].url}
-        videoDescription={""}
-      />
-
-      {/* Anos 90 */}
-      {/* A Praça é Nossa */}
-      {/* Show do Tom */}
-      {/* Pânico na TV */}
-      {carousels}
-
-      <Footer />
-    </div>
-  );
 }
 
 export default Home;
