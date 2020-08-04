@@ -1,20 +1,20 @@
 import React from 'react';
-// import PageDefault from '../PageDefault';
+import PageDefault from '../PageDefault';
 import './styles.css';
+import TextoSeparado from '../TextoSeparado';
 
 function ErroAbestado() {
     return (
-        // <PageDefault>
-            <div>
-                <p className="codigo-erro">
-                    404
-                </p>
-                <span>Página não encontrada</span>
-                <p>
-                    Ora menino...
-                </p>
-            </div>
-        // </PageDefault>
+        <PageDefault>
+            <TextoSeparado
+                texto="Erro 404"
+                label="Erro para página não encontrada"
+                role="erro404"
+            />
+            <p>
+                Que diabo é isso, abestado?
+            </p>
+        </PageDefault>
     );
 }
 
